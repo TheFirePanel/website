@@ -1,0 +1,49 @@
+<a [routerLink]="'/'"><img src="/assets/primary_logo.png" /></a>
+<mat-toolbar color="primary" class="desktop">
+  <a [routerLink]="'/'"><button mat-button>Latest</button></a>
+  <a [routerLink]="'/history'"><button mat-button>History</button></a>
+  <a [routerLink]="'/about'"><button mat-button>About</button></a>
+  <a [routerLink]="'/tools'"><button mat-button>Tools</button></a>
+  <a href="https://wiki.thefirepanel.com"
+    ><button mat-button>Wiki</button></a
+  >
+  <a href="https://forums.thefirepanel.com"
+    ><button mat-button>Forums</button></a
+  >
+</mat-toolbar>
+
+<mat-toolbar color="primary" class="mobile">
+  <mat-toolbar-row (click)="expanded = !expanded">
+    <mat-icon fontIcon="menu"></mat-icon>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="expanded"
+    ><a [routerLink]="'/'" (click)="expanded = false"
+      ><button mat-button>Latest</button></a
+    ></mat-toolbar-row
+  >
+  <mat-toolbar-row *ngIf="expanded" (click)="expanded = false"
+    ><a [routerLink]="'/history'"
+      ><button mat-button>History</button></a
+    ></mat-toolbar-row
+  >
+  <mat-toolbar-row *ngIf="expanded" (click)="expanded = false"
+    ><a [routerLink]="'/about'"
+      ><button mat-button>About</button></a
+    ></mat-toolbar-row
+  >
+  <mat-toolbar-row *ngIf="expanded" (click)="expanded = false"
+    ><a [routerLink]="'/tools'"
+      ><button mat-button>Tools</button></a
+    ></mat-toolbar-row
+  >
+  <mat-toolbar-row *ngIf="expanded"
+    ><a href="https://wiki.thefirepanel.com"
+      ><button mat-button>Wiki</button></a
+    ></mat-toolbar-row
+  >
+  <mat-toolbar-row *ngIf="expanded"
+    ><a href="https://forums.thefirepanel.com"
+      ><button mat-button>Forums</button></a
+    ></mat-toolbar-row
+  >
+</mat-toolbar>

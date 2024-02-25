@@ -1,0 +1,19 @@
+.content {
+  display: block;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: .4em;
+}
+
+app-footer {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: right;
+  width: 99vw;
+  bottom: 0;
+  position: fixed;
+}

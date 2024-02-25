@@ -1,0 +1,40 @@
+.bio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    section {
+        padding: 1em;
+        
+        h2 {
+            text-align: left;
+        }
+
+        a {
+            color: #e2393b;
+            font-size: 1.2em;
+            transition: .2s;
+        }
+
+        a:hover {
+            filter: brightness(80%);
+            transition: .2s;
+        }
+    }
+}
+
+h2 {
+    margin-top: 2em;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px ) {
+    .bio {
+        flex-direction: column;
+    }
+}

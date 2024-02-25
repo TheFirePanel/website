@@ -1,0 +1,23 @@
+<h1>Simplex Model Number Checker</h1>
+<h2>Enter a Simplex Model Number Below</h2>
+<p>The Simplex Model Number Checker is designed to assist users in determining compatability of Audio / Visual devices. See device types below to understand what kind of systems a particular device will work with.</p>
+
+<mat-spinner *ngIf="!ready"></mat-spinner>
+<form *ngIf="ready">
+    <mat-form-field>
+        <mat-label>Enter Model Number Here..</mat-label>
+        <input matInput type="text">
+    </mat-form-field>
+</form>
+
+<h2>Device Types</h2>
+<ul>
+    <li><b style="color: green;">FreeRun:</b> When power is applied, both the horn and strobe will run</li>
+    <li><b style="color: green;">Selectable:</b> When power is applied, the horn will run always. The strobe can flash on it's own, or with SmartSync depending on a DIP Switch setting</li>
+    <li><b style="color: gold;">Syncable:</b> Horn will operate when power is applied, but strobe will only flash when power is removed. Enabling a non-continuous code from a panel will achieve this.</li>
+    <li><b style="color: orange;">SmartSync:</b> Requires an IDNAC compatible Simplex Panel/Power Supply, or a SmartSync module such as the 4905-9938 to operate Horn or Strobe</li>
+    <li><b style="color: red;">Addressable:</b> For use only with high-end Simplex Panels, such as the 4100U</li>
+    <li><b style="color: red;">ES:</b> Requires a Simplex 4007ES, 4010ES, or 4100ES for operation</li>
+</ul>
+
+<b>***Remember never to apply Full Wave Rectified (FWR) to a Simplex Horn/Strobe! Filtered DC is critical!***</b>
