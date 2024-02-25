@@ -9,7 +9,7 @@ permissions:
   contents: read
   packages: write
 jobs:
-  test:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
