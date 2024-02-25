@@ -27,4 +27,4 @@ jobs:
       - name: Lint Application
         run: ng lint
       - name: Run Angular Tests
-        run: ng test
+        run: ng test --browsers ChromeHeadless
