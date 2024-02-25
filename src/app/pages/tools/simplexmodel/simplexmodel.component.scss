@@ -12,3 +12,13 @@ li {
         font-size: inherit;
     }
 }
+
+a {
+    color: #e2393b;
+    transition: .2s;
+}
+
+a:hover {
+    filter: brightness(80%);
+    transition: .2s;
+}
