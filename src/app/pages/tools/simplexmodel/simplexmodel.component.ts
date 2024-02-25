@@ -25,7 +25,7 @@ import { FormatSimplexResultPipe } from './format-simplex-result.pipe';
 export class SimplexmodelComponent implements OnInit {
   githubUrl =
     'https://raw.githubusercontent.com/TheFirePanel/SimplexModelChecker/main';
-  categories: any;
+  categories: string[] = [];
   devices: { category: string; model: string }[] = [];
   device: { category: string; model: string } | undefined;
   ready = false;
@@ -50,11 +50,11 @@ export class SimplexmodelComponent implements OnInit {
 
   getDevices() {
     let completed = 0;
-
-    for (let c in this.categories) {
+    
+    for (const c in this.categories) {
       this.http.get(`${this.githubUrl}/${this.categories[c]}.json`).subscribe({
         next: (res: any) => {
-          for (let d in res.devices) {
+          for (const d in res.devices) {
             this.devices.push({
               category: this.categories[c],
               model: res.devices[d],
@@ -76,7 +76,7 @@ export class SimplexmodelComponent implements OnInit {
   }
 
   search(entry: any) {
-    let device = this.devices.filter((value) => {
+    const device = this.devices.filter((value) => {
       return value.model === entry;
     });
 
@@ -84,19 +84,18 @@ export class SimplexmodelComponent implements OnInit {
     else this.device = undefined;
   }
 
-  getCategoryColor(): string {
+  getCategoryColor(category?: string): string {
     const colorMap: any = {
-      'freeRun': 'green',
-      'selectable': 'green',
-      'syncable': 'gold',
-      'smartSync': 'orange',
-      'addressable': 'red',
-      'es': 'red'
+      freeRun: 'green',
+      selectable: 'green',
+      syncable: 'gold',
+      smartSync: 'orange',
+      addressable: 'red',
+      es: 'red',
     };
-    
-    if (this.device?.category)
+    if (category) return colorMap[category] || 'inherit';
+    else if (this.device?.category)
       return colorMap[this.device?.category] || 'inherit';
-    else
-      return 'inherit'
-  }  
+    else return 'inherit';
+  }
 }

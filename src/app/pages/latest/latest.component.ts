@@ -1,6 +1,6 @@
-import { Component, OnInit, SecurityContext } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgIf } from '@angular/common';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-latest',
@@ -10,7 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrl: './latest.component.scss'
 })
 export class LatestComponent implements OnInit {
-  latestVideo: any;
+  latestVideo: {embedUrl: SafeResourceUrl} | undefined;
 
   constructor(private sanatizer: DomSanitizer) { }
 

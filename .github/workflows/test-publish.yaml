@@ -1,0 +1,13 @@
+name: Test and Publish on Main
+on:
+  push:
+    paths:
+      - "main"
+  workflow_dispatch:
+jobs:
+  test:
+    uses: ./.github/workflows/test.yaml
+  
+  publish:
+    needs: test
+    uses: ./.github/workflows/publish.yaml

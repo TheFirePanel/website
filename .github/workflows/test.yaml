@@ -1,0 +1,30 @@
+name: Angular Test
+on:
+  push:
+    branches-ignore:
+      - "main"
+    paths-ignore:
+      - "README.md"
+      - "Dockerfile"
+      - ".dockerignore"
+      - ".gitignore"
+  workflow_call:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Configure NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Setup Node Modules and Angular
+        run: |
+          npm ci && \
+          npm install -g @angular/cli@17
+      - name: Lint Application
+        run: ng lint
+      - name: Run Angular Tests
+        run: ng test
