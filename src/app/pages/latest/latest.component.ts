@@ -19,11 +19,8 @@ export class LatestComponent implements OnInit {
   }
 
   getLatestVideo() {
-    //TODO Automate This in a secure fashion
-    const videoId = "8jKyQw1cGrw"
-
     this.latestVideo = {
-      embedUrl: this.sanatizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${videoId}`)
+      embedUrl: this.sanatizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed?listType=playlist&list=UULFOxmo0LNmiKT_RitieZoPIQ`)
     }
   }
 }
