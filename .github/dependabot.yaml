@@ -5,9 +5,13 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
-    ignore:
-      - dependency-name: "@angular/*"
-      - dependency-name: "@angular-devkit/build-angular"
+    groups:
+      eslint:
+        patterns:
+        - "@typescript-eslint*"
+      angular:
+        patterns:
+        - "@angular*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
