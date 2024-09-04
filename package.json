@@ -23,7 +23,7 @@
     "@angular/router": "^17.3.8",
     "@fortawesome/angular-fontawesome": "~0.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.3",
     "zone.js": "~0.14.7"
