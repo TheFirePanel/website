@@ -36,15 +36,15 @@ $mat-accent: (
   ),
 );
 
-$website-primary: mat.define-palette($mat-primary, main, lighter, darker);
-$website-accent: mat.define-palette($mat-accent, main, lighter, darker);
+$website-primary: mat.m2-define-palette($mat-primary, main, lighter, darker);
+$website-accent: mat.m2-define-palette($mat-accent, main, lighter, darker);
 
 // The warn palette is optional (defaults to red).
-$website-warn: mat.define-palette(mat.$red-palette);
+$website-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$website-theme: mat.define-light-theme(
+$website-theme: mat.m2-define-light-theme(
   (
     color: (
       primary: $website-primary,
