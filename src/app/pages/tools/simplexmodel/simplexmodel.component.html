@@ -15,12 +15,12 @@
 
 <h2>Device Types</h2>
 <ul>
-    <li><b [style.color]="getCategoryColor('freeRun')">FreeRun:</b> When power is applied, both the horn and strobe will run</li>
-    <li><b [style.color]="getCategoryColor('selectable')">Selectable:</b> When power is applied, the horn will run always. The strobe can flash on it's own, or with SmartSync depending on a DIP Switch setting</li>
+    <li><b [style.color]="getCategoryColor('freeRun')">FreeRun:</b> When power is applied, both the horn and strobe will run.</li>
+    <li><b [style.color]="getCategoryColor('selectable')">Selectable:</b> When power is applied, the horn will operate normally. Strobe operation is controlled by a switch next to the wiring terminals, allowing the strobe to operate in SmartSync or Freerun mode.</li>
     <li><b [style.color]="getCategoryColor('syncable')">Syncable:</b> Horn will operate when power is applied, but strobe will only flash when power is removed. Enabling a non-continuous code from a panel will achieve this.</li>
-    <li><b [style.color]="getCategoryColor('smartSync')">SmartSync:</b> Requires an IDNAC compatible Simplex Panel/Power Supply, or a SmartSync module such as the 4905-9938 to operate Horn or Strobe</li>
-    <li><b [style.color]="getCategoryColor('addressable')">Addressable:</b> For use only with high-end Simplex Panels, such as the 4100U</li>
-    <li><b [style.color]="getCategoryColor('es')">ES:</b> Requires a Simplex 4007ES, 4010ES, or 4100ES for operation</li>
+    <li><b [style.color]="getCategoryColor('smartSync')">SmartSync:</b> Requires a SmartSync-compatible Simplex panel or power supply (4006, 4008, 4010, 4009 IDNet NAC Extender) or a 4905-9938 SmartSync Module to operate.</li>
+    <li><b [style.color]="getCategoryColor('addressable')">Addressable:</b> Requires a TrueNAC-compatible Simplex panel or power supply (4100U or 4100ES with TrueAlert Power Supply, any IDNAC power supply, or 4009 TrueAlert Addressable Controller) to operate.</li>
+    <li><b [style.color]="getCategoryColor('es')">ES:</b> Requires an IDNAC-compatible Simplex panel or power supply (IDNAC 4007ES, IDNAC 4010ES, 4100ES with EPS or ES-PS Power Supply [With IDNAC Card]) to operate. *Some* horn strobe models can be operated with a 4009 TrueAlert Addressable Controller.</li>
 </ul>
 
 <b>***Remember never to apply Full Wave Rectified (FWR) to a Simplex Horn/Strobe! Filtered DC is critical!***</b>
