@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NgIf } from '@angular/common';
+
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-latest',
-    imports: [NgIf],
+    imports: [],
     templateUrl: './latest.component.html',
     styleUrl: './latest.component.scss'
 })

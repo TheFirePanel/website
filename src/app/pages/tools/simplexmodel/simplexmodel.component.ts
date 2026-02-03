@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,13 +11,12 @@ import { FormatSimplexResultPipe } from './format-simplex-result.pipe';
 @Component({
     selector: 'app-simplexmodel',
     imports: [
-        MatProgressSpinner,
-        MatFormField,
-        MatLabel,
-        MatInput,
-        NgIf,
-        FormatSimplexResultPipe,
-    ],
+    MatProgressSpinner,
+    MatFormField,
+    MatLabel,
+    MatInput,
+    FormatSimplexResultPipe
+],
     templateUrl: './simplexmodel.component.html',
     styleUrl: './simplexmodel.component.scss'
 })

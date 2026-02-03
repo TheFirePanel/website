@@ -7,58 +7,70 @@
   <a href="https://wiki.thefirepanel.com"><button mat-button>Wiki</button></a>
   <a href="https://forums.thefirepanel.com"
     ><button mat-button>Forums</button></a
-  >
-</mat-toolbar>
+    >
+  </mat-toolbar>
 
-<mat-toolbar color="primary" class="mobile">
-  <mat-toolbar-row (click)="expanded = !expanded">
-    <mat-icon fontIcon="menu"></mat-icon>
-  </mat-toolbar-row>
-  <mat-toolbar-row *ngIf="expanded"
-    ><a [routerLink]="'/'" (click)="expanded = false"
-      ><button mat-button>Latest</button></a
-    ></mat-toolbar-row
-  >
-  <mat-toolbar-row *ngIf="expanded" (click)="expanded = false"
-    ><a [routerLink]="'/history'"
-      ><button mat-button>History</button></a
-    ></mat-toolbar-row
-  >
-  <mat-toolbar-row *ngIf="expanded" (click)="expanded = false"
-    ><a [routerLink]="'/about'"
-      ><button mat-button>About</button></a
-    ></mat-toolbar-row
-  >
-  <mat-toolbar-row *ngIf="expanded" (click)="expanded = false"
-    ><a [routerLink]="'/tools'"
-      ><button mat-button>Tools</button></a
-    ></mat-toolbar-row
-  >
-  <mat-toolbar-row *ngIf="expanded"
-    ><a href="https://wiki.thefirepanel.com"
-      ><button mat-button>Wiki</button></a
-    ></mat-toolbar-row
-  >
-  <mat-toolbar-row *ngIf="expanded"
-    ><a href="https://forums.thefirepanel.com"
-      ><button mat-button>Forums</button></a
-    ></mat-toolbar-row
-  >
-</mat-toolbar>
-<div class="social">
-  <a href="https://www.facebook.com/TheFirePanelLLC/" target="_blank"
-    ><fa-icon [icon]="faFacebook"></fa-icon
-  ></a>
-  <a href="https://www.instagram.com/thefirepanel/" target="_blank"
-    ><fa-icon [icon]="faInstagram"></fa-icon
-  ></a>
-  <a href="https://www.tiktok.com/@thefirepanel/" target="_blank"
-    ><fa-icon [icon]="faTiktok"></fa-icon
-  ></a>
-  <a href="https://www.threads.net/@thefirepanel/" target="_blank"
-    ><fa-icon [icon]="faThreads"></fa-icon
-  ></a>
-  <a href="https://www.youtube.com/@thefirepanel/" target="_blank"
-    ><fa-icon [icon]="faYoutube"></fa-icon
-  ></a>
-</div>
+  <mat-toolbar color="primary" class="mobile">
+    <mat-toolbar-row (click)="expanded = !expanded">
+      <mat-icon fontIcon="menu"></mat-icon>
+    </mat-toolbar-row>
+    @if (expanded) {
+      <mat-toolbar-row
+        ><a [routerLink]="'/'" (click)="expanded = false"
+        ><button mat-button>Latest</button></a
+        ></mat-toolbar-row
+        >
+      }
+      @if (expanded) {
+        <mat-toolbar-row (click)="expanded = false"
+          ><a [routerLink]="'/history'"
+          ><button mat-button>History</button></a
+          ></mat-toolbar-row
+          >
+        }
+        @if (expanded) {
+          <mat-toolbar-row (click)="expanded = false"
+            ><a [routerLink]="'/about'"
+            ><button mat-button>About</button></a
+            ></mat-toolbar-row
+            >
+          }
+          @if (expanded) {
+            <mat-toolbar-row (click)="expanded = false"
+              ><a [routerLink]="'/tools'"
+              ><button mat-button>Tools</button></a
+              ></mat-toolbar-row
+              >
+            }
+            @if (expanded) {
+              <mat-toolbar-row
+                ><a href="https://wiki.thefirepanel.com"
+                ><button mat-button>Wiki</button></a
+                ></mat-toolbar-row
+                >
+              }
+              @if (expanded) {
+                <mat-toolbar-row
+                  ><a href="https://forums.thefirepanel.com"
+                  ><button mat-button>Forums</button></a
+                  ></mat-toolbar-row
+                  >
+                }
+              </mat-toolbar>
+              <div class="social">
+                <a href="https://www.facebook.com/TheFirePanelLLC/" target="_blank"
+                  ><fa-icon [icon]="faFacebook"></fa-icon
+                ></a>
+                <a href="https://www.instagram.com/thefirepanel/" target="_blank"
+                  ><fa-icon [icon]="faInstagram"></fa-icon
+                ></a>
+                <a href="https://www.tiktok.com/@thefirepanel/" target="_blank"
+                  ><fa-icon [icon]="faTiktok"></fa-icon
+                ></a>
+                <a href="https://www.threads.net/@thefirepanel/" target="_blank"
+                  ><fa-icon [icon]="faThreads"></fa-icon
+                ></a>
+                <a href="https://www.youtube.com/@thefirepanel/" target="_blank"
+                  ><fa-icon [icon]="faYoutube"></fa-icon
+                ></a>
+              </div>

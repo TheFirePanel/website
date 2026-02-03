@@ -1,5 +1,9 @@
 <h1>Latest Video from The Fire Panel</h1>
-<div *ngIf="latestVideo">
-  <iframe [src]="latestVideo.embedUrl" frameborder="0" allowfullscreen></iframe>
-</div>
-<div *ngIf="!latestVideo">No video available</div>
+@if (latestVideo) {
+  <div>
+    <iframe [src]="latestVideo.embedUrl" frameborder="0" allowfullscreen></iframe>
+  </div>
+}
+@if (!latestVideo) {
+  <div>No video available</div>
+}
