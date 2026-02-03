@@ -3,11 +3,10 @@ import { NgIf } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-latest',
-  standalone: true,
-  imports: [NgIf],
-  templateUrl: './latest.component.html',
-  styleUrl: './latest.component.scss'
+    selector: 'app-latest',
+    imports: [NgIf],
+    templateUrl: './latest.component.html',
+    styleUrl: './latest.component.scss'
 })
 export class LatestComponent implements OnInit {
   latestVideo: {embedUrl: SafeResourceUrl} | undefined;

@@ -9,18 +9,17 @@ import { MatInput } from '@angular/material/input';
 import { FormatSimplexResultPipe } from './format-simplex-result.pipe';
 
 @Component({
-  selector: 'app-simplexmodel',
-  standalone: true,
-  imports: [
-    MatProgressSpinner,
-    MatFormField,
-    MatLabel,
-    MatInput,
-    NgIf,
-    FormatSimplexResultPipe,
-  ],
-  templateUrl: './simplexmodel.component.html',
-  styleUrl: './simplexmodel.component.scss',
+    selector: 'app-simplexmodel',
+    imports: [
+        MatProgressSpinner,
+        MatFormField,
+        MatLabel,
+        MatInput,
+        NgIf,
+        FormatSimplexResultPipe,
+    ],
+    templateUrl: './simplexmodel.component.html',
+    styleUrl: './simplexmodel.component.scss'
 })
 export class SimplexmodelComponent implements OnInit {
   githubUrl =
