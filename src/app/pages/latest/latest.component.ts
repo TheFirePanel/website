@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -9,9 +9,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
     styleUrl: './latest.component.scss'
 })
 export class LatestComponent implements OnInit {
-  latestVideo: {embedUrl: SafeResourceUrl} | undefined;
+  private sanatizer = inject(DomSanitizer);
 
-  constructor(private sanatizer: DomSanitizer) { }
+  latestVideo: {embedUrl: SafeResourceUrl} | undefined;
 
   ngOnInit(): void {
     this.getLatestVideo();
