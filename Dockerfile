@@ -1,13 +1,10 @@
-FROM node:20 AS build
+FROM node:24 AS build
 WORKDIR /app
 COPY ./ .
-RUN npm ci && \
-    npm install -g @angular/cli@17 && \
+RUN npm i && \
+    npm install -g @angular/cli@21 && \
     ng build
 
-FROM bitnami/nginx:latest AS final
-USER root
-RUN apt-get update && apt-get upgrade -y
-USER 1001
-COPY nginx.conf /opt/bitnami/nginx/conf/server_blocks/nginx.conf
-COPY --from=build /app/dist/website/browser* /app
+FROM nginx:1.29.4-alpine AS final
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist/website/browser* /usr/share/nginx/html
