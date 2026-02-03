@@ -15,15 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Configure NodeJS
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
       - name: Setup Node Modules and Angular
         run: |
-          npm ci && \
-          npm install -g @angular/cli@17
+          npm i && \
+          npm install -g @angular/cli@21
       - name: Lint Application
         run: ng lint
       - name: Run Angular Tests

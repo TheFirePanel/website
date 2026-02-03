@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { Component, OnInit, inject } from '@angular/core';
+
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-latest',
-  standalone: true,
-  imports: [NgIf],
-  templateUrl: './latest.component.html',
-  styleUrl: './latest.component.scss'
+    selector: 'app-latest',
+    imports: [],
+    templateUrl: './latest.component.html',
+    styleUrl: './latest.component.scss'
 })
 export class LatestComponent implements OnInit {
-  latestVideo: {embedUrl: SafeResourceUrl} | undefined;
+  private sanatizer = inject(DomSanitizer);
 
-  constructor(private sanatizer: DomSanitizer) { }
+  latestVideo: {embedUrl: SafeResourceUrl} | undefined;
 
   ngOnInit(): void {
     this.getLatestVideo();

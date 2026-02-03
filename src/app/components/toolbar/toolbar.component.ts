@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faInstagram, faTiktok, faThreads, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
@@ -12,11 +12,10 @@ import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-toolbar',
-  standalone: true,
-  imports: [MatToolbar, MatToolbarRow, MatButton, MatIcon, RouterOutlet, RouterLink, NgIf, FontAwesomeModule],
-  templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.scss',
+    selector: 'app-toolbar',
+    imports: [MatToolbar, MatToolbarRow, MatButton, MatIcon, RouterLink, FontAwesomeModule],
+    templateUrl: './toolbar.component.html',
+    styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent {
   expanded = false;

@@ -1,6 +1,6 @@
-import { NgIf } from '@angular/common';
+
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
@@ -9,28 +9,26 @@ import { MatInput } from '@angular/material/input';
 import { FormatSimplexResultPipe } from './format-simplex-result.pipe';
 
 @Component({
-  selector: 'app-simplexmodel',
-  standalone: true,
-  imports: [
+    selector: 'app-simplexmodel',
+    imports: [
     MatProgressSpinner,
     MatFormField,
     MatLabel,
     MatInput,
-    NgIf,
-    FormatSimplexResultPipe,
-  ],
-  templateUrl: './simplexmodel.component.html',
-  styleUrl: './simplexmodel.component.scss',
+    FormatSimplexResultPipe
+],
+    templateUrl: './simplexmodel.component.html',
+    styleUrl: './simplexmodel.component.scss'
 })
 export class SimplexmodelComponent implements OnInit {
+  private http = inject(HttpClient);
+
   githubUrl =
     'https://raw.githubusercontent.com/TheFirePanel/SimplexModelChecker/main';
   categories: string[] = [];
   devices: { category: string; model: string }[] = [];
   device: { category: string; model: string } | undefined;
   ready = false;
-
-  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.getCategories();
