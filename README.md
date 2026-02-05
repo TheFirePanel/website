@@ -5,8 +5,6 @@ It is built with **Angular 21** and designed to be deployed as a **static web ap
 
 This repository contains the source code, configuration, and supporting files required to deploy the website.
 
----
-
 ## Contributing
 
 Contributions are welcome!
@@ -18,14 +16,10 @@ To contribute:
 
 Please keep pull requests focused and well-documented.
 
----
-
 ## 🛡 License
 
 This project is licensed under the **Apache License 2.0**.  
 See the [LICENSE](LICENSE) file for full license details.
-
----
 
 ## About The Fire Panel
 
