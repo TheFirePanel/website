@@ -1,27 +1,32 @@
-# Website
+# The Fire Panel — Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+**The Fire Panel** website is the official public-facing site for the Fire Panel project.  
+It is built with **Angular 21** and designed to be deployed as a **static web application**.
 
-## Development server
+This repository contains the source code, configuration, and supporting files required to deploy the website.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Contributing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Contributions are welcome!
 
-## Build
+To contribute:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request with a clear description of your changes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Please keep pull requests focused and well-documented.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛡 License
 
-## Running end-to-end tests
+This project is licensed under the **Apache License 2.0**.  
+See the [LICENSE](LICENSE) file for full license details.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## About The Fire Panel
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The Fire Panel is centered around fire alarm systems, life safety technology, and related systems.
