@@ -5,6 +5,6 @@ RUN npm i && \
     npm install -g @angular/cli@21 && \
     ng build
 
-FROM nginx:1.29.7-alpine AS final
+FROM nginx:1.29.8-alpine AS final
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist/website/browser* /usr/share/nginx/html
