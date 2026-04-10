@@ -24,7 +24,7 @@ jobs:
           node-version: 24
       - name: Setup Node Modules and Angular
         run: |
-          npm i && \
+          npm ci && \
           npm install -g @angular/cli@21
       - name: Lint Application
         run: ng lint
