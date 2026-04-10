@@ -1,7 +1,7 @@
 FROM node:24 AS build
 WORKDIR /app
 COPY ./ .
-RUN npm i && \
+RUN npm ci && \
     npm install -g @angular/cli@21 && \
     ng build
 
